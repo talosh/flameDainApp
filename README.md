@@ -39,16 +39,22 @@ DainApp requires gcc compiler newer then default one on CentOS 7.6 in order to b
     $ sudo yum install centos-release-scl-rh
     $ sudo yum install devtoolset-7-toolchain
 
-3) Cuda and Cudnn
-run nvidia-smi to check driver version and cuda version for this driver
+#### Cuda and Cudnn
+
+run 
+    $ nvidia-smi
+    
+and check driver version and cuda version for this driver
 in my case driver is 440.44 and cuda version is 10.2
 go to cuda download page:
 https://developer.nvidia.com/cuda-toolkit-archive
 click on the version and then Linux->x86_64->CentOS->7->runfile(local)
 do not use rpm unless you know what you're doing it is likely to kill your flame
 there should be download url and install command, in my case:
-wget https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
-sudo sh cuda_10.2.89_440.33.01_linux.run
+
+    $ wget https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda_10.2.89_440.33.01_linux.run
+    $ sudo sh cuda_10.2.89_440.33.01_linux.run
+
 Do not install driver, uncheck it. (installing driver will likely break flame install)
 Ignore cuda complainig about it.
 
