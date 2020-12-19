@@ -149,10 +149,12 @@ among the answers there should be "Is CUDA available: Yes"
     $ pip install opencv-python
     $ pip install opencv-contrib-python
 
-7) Get ffmpeg if you don't have it and put it somwhere in the bin path
-(I use static build from https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
-and place it in /usr/bin)
+#### Get ffmpeg if you don't have it and put it somwhere in $PATH
 
+    $ wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+    $ tar xvf ffmpeg-release-amd64-static.tar.xz
+    $ sudo cp ffmpeg-4.3.1-amd64-static/ffmpeg /usr/bin/
+    
 8) get Dain-App and original DAIN (for training)
 
 9) Build cuda code (don't forget it has to be done from within anaconda environment we were using and  with devtoolset activated)
