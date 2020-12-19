@@ -49,7 +49,7 @@ and check driver version and cuda version for this driver
 
 in my case driver is 440.44 and cuda version is 10.2
 
-Most of the installation later assume this cuda version. If you have newer - try it and let me know if it works.
+Most of the installation later assume cuda version 10.2. If you have newer - try it and let me know if it works.
 
 go to cuda download page:
 https://developer.nvidia.com/cuda-toolkit-archive
