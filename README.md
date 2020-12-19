@@ -6,22 +6,38 @@ instructions on how to install on flame machine
 
 #### Python3 environment:
 
-Download Anaconda3 version 2018.12
+Download Anaconda3 version 2018.12:
 
     $ wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
 
-Install by running  
-$ bash Anaconda3-2018.12-Linux-x86_64.sh
-if using standart flame login run bash shell: /bin/bash
-run [anaconda_install_dir]/bin/conda activate
-use suggested command to enable for current users or all usersd  
-press ctrl+d and run bash shell again
-activate anaconda base env:
-conda activate base
+If you're not running bash already (tcsh is a standart for default flame user):
+    
+    $ /bin/bash
+    
+Install Anaconda3:
 
-2) We need newer gcc in isolated separate environment
-$ sudo yum install centos-release-scl-rh
-$ sudo yum install devtoolset-7-toolchain
+    $ bash Anaconda3-2018.12-Linux-x86_64.sh
+
+Assuming that you've used default installation folder ~/anaconda3 run:
+
+    $ echo ". ~/anaconda3/etc/profile.d/conda.sh" >> ~/.bashrc
+
+press ctrl+d and run bash shell again
+
+    $ /bin/bash
+    
+activate anaconda base environment:
+
+    $ conda activate base
+    
+That will be our main environment to run DainApp, so we would need to launch bash shel and then to activate environment there before using it
+
+#### Newer gcc in separate isolated environment:
+
+DainApp requires gcc compiler newer then default one on CentOS 7.6 in order to be able to compile its cuda extensions. Luckily it is possible to install it in hassle-free way without interfearing with our main flame environment
+
+    $ sudo yum install centos-release-scl-rh
+    $ sudo yum install devtoolset-7-toolchain
 
 3) Cuda and Cudnn
 run nvidia-smi to check driver version and cuda version for this driver
