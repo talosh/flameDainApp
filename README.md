@@ -4,7 +4,8 @@ instructions on how to install on flame machine
 
 ### Installation
 
-1. Python3 environment:
+Python3 environment:
+
 Download Anaconda3 version 2018.12
 https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
 
