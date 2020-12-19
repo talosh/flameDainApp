@@ -1,0 +1,7 @@
+#!/usr/bin/python
+
+import os
+
+current_dir = os.path.abspath(os.path.dirname(__file__))
+cmd = 'cd ' + os.path.join(current_dir, 'Dain-App') +'; python ' + os.path.join(current_dir, 'Dain-App', 'my_design.py')
+os.system(cmd)
