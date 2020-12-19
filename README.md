@@ -41,11 +41,16 @@ DainApp requires gcc compiler newer then default one on CentOS 7.6 in order to b
 
 #### Cuda and Cudnn
 
-run 
+run:
+
     $ nvidia-smi
     
 and check driver version and cuda version for this driver
+
 in my case driver is 440.44 and cuda version is 10.2
+
+Most of the installation later assume this cuda version. If you have newer - try it and let me know if it works.
+
 go to cuda download page:
 https://developer.nvidia.com/cuda-toolkit-archive
 click on the version and then Linux->x86_64->CentOS->7->runfile(local)
