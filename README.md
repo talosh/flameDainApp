@@ -177,6 +177,10 @@ Generate the Correlation package required by PWCNet (whatever that means):
 
     $ cd ../PWCNet/correlation_package_pytorch1_0
     $ ./build.sh
+    
+leave gcc7 build environment
+
+    $ exit
 
 #### Run Dain-App
     
