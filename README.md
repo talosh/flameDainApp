@@ -28,7 +28,7 @@ press ctrl+d and run bash shell again
     
 activate anaconda base environment:
 
-    $ conda activate base
+    $ conda activate
     
 clone base environment into dainapp and dain (for training)
 
@@ -88,10 +88,10 @@ first we need system to pick up newly installed cuda libraries
     
     $ sudo ldconfig
 
-make sure you're running bash with base anaconda environment activated. You should have (base) before your shell. if not run:
+activate our dainapp environment
     
     $ /bin/bash
-    $ conda activate
+    $ conda activate dainapp
 
 activate devtoolset for newer gcc:
     
