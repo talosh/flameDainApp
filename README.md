@@ -145,8 +145,8 @@ I'm using 1.6.0 from here: https://pytorch.org/get-started/previous-versions/
     
 to test pytorch:
     
-    $ python ~/anaconda3/lib/python3.7/site-packages/torch/utils/collect_env.py
-
+    $ python ~/anaconda3/envs/dainapp/lib/python3.7/site-packages/torch/utils/collect_env.py
+    
 among the answers there should be "Is CUDA available: Yes"
 
 #### Install OpenCV
