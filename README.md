@@ -167,7 +167,7 @@ don't forget it has to be done from within anaconda environment we were using an
 
 build PyTorch extensions:
 
-    $ cd Dain-App
+    $ cd flameDainApp/Dain-App
     $ cd my_package 
     $ ./build.sh
     
