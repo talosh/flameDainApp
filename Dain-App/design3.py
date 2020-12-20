@@ -824,7 +824,7 @@ class Ui_Dialog(QtCore.QObject):
         self.label_5.setText(_translate("Dialog", "Output FPS: "))
         self.label_17.setText(_translate("Dialog", "Note: GIFS above 50FPS will slow down. (This is a gif limitation)"))
         self.label_23.setText(_translate("Dialog", "PNG files compression:"))
-        self.pngCompress.setText(_translate("Dialog", "6"))
+        self.pngCompress.setText(_translate("Dialog", "0"))
         self.label_24.setText(_translate("Dialog", "1 gives best speed, 9 gives best compression, 0 gives no compression at all"))
         self.label_26.setText(_translate("Dialog", "Not applied when extracting original_frames from mp4"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Dialog", "Interpolation Options"))
