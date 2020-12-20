@@ -173,7 +173,7 @@ build PyTorch extensions:
     $ cd flameDainApp/Dain-App/my_package 
     $ ./build.sh
     
-Generate the Correlation package required by PWCNet:
+Generate the Correlation package required by PWCNet (whatever that means):
 
     $ cd ../PWCNet/correlation_package_pytorch1_0
     $ ./build.sh
