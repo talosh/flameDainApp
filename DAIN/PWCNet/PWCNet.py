@@ -218,8 +218,10 @@ class PWCDCNet(nn.Module):
         c26 = self.conv6b(self.conv6a(self.conv6aa(c25)))
         # print("features " +str(time.time()- start))
         # start=  time.time()
-        corr6 = self.corr(c16, c26) 
-        corr6 = self.leakyRELU(corr6)   
+        #print ('c16 %s' % c16)
+        #print ('c26 %s' % c26)
+        corr6 = self.corr(self.corr, c16, c26)
+        corr6 = self.leakyRELU(corr6)
 
 
         x = torch.cat((self.conv6_0(corr6), corr6),1)
