@@ -186,4 +186,8 @@ you can run the script directly from within Dain-App folder:
 
     $ python my_design.py
     
+### Training
+
+For custom training annoingly there should be a separate environment because the "autograd" function has changed with the new version of PyTorch.
+
 
