@@ -193,7 +193,9 @@ you can run the script directly from within Dain-App folder:
     
 ### Training
 
-For custom training annoingly there should be a separate environment because the "autograd" function has changed with the new version of PyTorch.
+For training annoingly there should be a separate environment because its broken in DainApp and we need older version of PyTorch to use original Dain implementation.
 
-    $ conda create --name train --clone base
+    $ conda activate dain
+    $ conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
+    
 
