@@ -155,8 +155,34 @@ among the answers there should be "Is CUDA available: Yes"
     $ tar xvf ffmpeg-release-amd64-static.tar.xz
     $ sudo cp ffmpeg-4.3.1-amd64-static/ffmpeg /usr/bin/
     
-8) get Dain-App and original DAIN (for training)
+#### Download flameDainApp (includes Dain-App and original DAIN for training)
 
-9) Build cuda code (don't forget it has to be done from within anaconda environment we were using and  with devtoolset activated)
+    $ git clone https://github.com/talosh/flameDainApp.git
+    
+#### Build Dain-App cuda extensions 
+don't forget it has to be done from within anaconda environment we were using and with devtoolset activated. If not sure run:
 
-10)
+    $ conda activate    
+    $ scl enable devtoolset-7 bash
+
+build PyTorch extensions:
+
+    $ cd Dain-App
+    $ cd my_package 
+    $ ./build.sh
+    
+Generate the Correlation package required by PWCNet:
+
+    $ cd ../PWCNet/correlation_package_pytorch1_0
+    $ ./build.sh
+
+#### Run Dain-App
+    
+    $ cd ../../../
+    $ ./start_dain_app
+    
+you can run the script directly from within Dain-App folder:
+
+    $ python my_design.py
+    
+
