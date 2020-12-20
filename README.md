@@ -165,9 +165,7 @@ among the answers there should be "Is CUDA available: Yes"
     $ git clone https://github.com/talosh/flameDainApp.git
     
 #### Build Dain-App cuda extensions 
-don't forget it has to be done from within anaconda environment we were using and with devtoolset activated. If not sure run:
 
-    $ conda activate    
     $ scl enable devtoolset-7 bash
 
 build PyTorch extensions:
