@@ -197,4 +197,6 @@ For training annoingly there should be a separate environment because its broken
     $ conda activate dain
     $ conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
     
+There should be possible to define different resolutions but for quick test to mimic Vimeo90 dataset I've rendered 10 frames of a size 448x256, exported it as a ProRes .mov file and used make_dataset.py script to create a dataset structure. Then I've grabbed the training command from DAIN repo and amended it to point to new dataset, placed newly generated .pth file from DAIN/model_weights into Dain-App/model_weights and it seem to take that new knowledge into aacount. Dataset path should point to new dataset. What all those other parameters do is still a subject to figure out.
 
+    $ CUDA_VISIBLE_DEVICES=0 python train.py --datasetPath /Volumes/projects/dain_test/training/render103/ --batch_size 1 --save_which 1 --lr 0.0005 --rectify_lr 0.0005 --flow_lr_coe 0.01 --occ_lr_coe 0.0 --filter_lr_coe 1.0 --ctx_lr_coe 1.0 --alpha 0.0 1.0 --patience 4 --factor 0.2 --pretrained model_weights/best.pth --numEpoch 20
