@@ -30,7 +30,12 @@ activate anaconda base environment:
 
     $ conda activate base
     
-That will be our main environment to run DainApp, so we would need to launch bash shel and then to activate environment there before using it
+clone base environment into dainapp and dain (for training)
+
+    $ conda create --name dainapp --clone base
+    $ conda create --name dain --clone base
+    
+dainapp will be main environment to run DainApp, so we would need to launch bash shell and then to activate environment there before using it
 
 #### Newer gcc in separate isolated environment:
 
