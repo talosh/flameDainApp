@@ -190,4 +190,5 @@ you can run the script directly from within Dain-App folder:
 
 For custom training annoingly there should be a separate environment because the "autograd" function has changed with the new version of PyTorch.
 
+    $ conda create --name train --clone base
 
