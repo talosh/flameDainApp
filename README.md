@@ -28,9 +28,14 @@ press ctrl+d and run bash shell again
     
 activate anaconda base environment:
 
-    $ conda activate base
+    $ conda activate
     
-That will be our main environment to run DainApp, so we would need to launch bash shel and then to activate environment there before using it
+clone base environment into dainapp and dain (for training)
+
+    $ conda create --name dainapp --clone base
+    $ conda create --name dain --clone base
+    
+dainapp will be main environment to run DainApp, so we would need to launch bash shell and then to activate environment there before using it
 
 #### Newer gcc in separate isolated environment:
 
@@ -83,10 +88,10 @@ first we need system to pick up newly installed cuda libraries
     
     $ sudo ldconfig
 
-make sure you're running bash with base anaconda environment activated. You should have (base) before your shell. if not run:
+activate our dainapp environment
     
     $ /bin/bash
-    $ conda activate
+    $ conda activate dainapp
 
 activate devtoolset for newer gcc:
     
@@ -140,8 +145,8 @@ I'm using 1.6.0 from here: https://pytorch.org/get-started/previous-versions/
     
 to test pytorch:
     
-    $ python ~/anaconda3/lib/python3.7/site-packages/torch/utils/collect_env.py
-
+    $ python ~/anaconda3/envs/dainapp/lib/python3.7/site-packages/torch/utils/collect_env.py
+    
 among the answers there should be "Is CUDA available: Yes"
 
 #### Install OpenCV
@@ -155,8 +160,41 @@ among the answers there should be "Is CUDA available: Yes"
     $ tar xvf ffmpeg-release-amd64-static.tar.xz
     $ sudo cp ffmpeg-4.3.1-amd64-static/ffmpeg /usr/bin/
     
-8) get Dain-App and original DAIN (for training)
+#### Download flameDainApp (includes Dain-App and original DAIN for training)
 
-9) Build cuda code (don't forget it has to be done from within anaconda environment we were using and  with devtoolset activated)
+    $ git clone https://github.com/talosh/flameDainApp.git
+    
+#### Build Dain-App cuda extensions 
 
-10)
+    $ scl enable devtoolset-7 bash
+
+build PyTorch extensions:
+
+    $ cd flameDainApp/Dain-App/my_package 
+    $ ./build.sh
+    
+Generate the Correlation package required by PWCNet (whatever that means):
+
+    $ cd ../PWCNet/correlation_package_pytorch1_0
+    $ ./build.sh
+    
+leave gcc7 build environment
+
+    $ exit
+
+#### Run Dain-App
+    
+    $ ~/flameDainApp/start_dain_app
+    
+you can run the script directly from within Dain-App folder:
+
+    $ python my_design.py
+    
+### Training
+
+For training annoingly there should be a separate environment because its broken in DainApp and we need older version of PyTorch to use original Dain implementation.
+
+    $ conda activate dain
+    $ conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit=10.0 -c pytorch
+    
+
