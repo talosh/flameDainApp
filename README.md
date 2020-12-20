@@ -170,9 +170,7 @@ among the answers there should be "Is CUDA available: Yes"
 
 build PyTorch extensions:
 
-    $ cd flameDainApp
-    $ cd Dain-App
-    $ cd my_package 
+    $ cd flameDainApp/Dain-App/my_package 
     $ ./build.sh
     
 Generate the Correlation package required by PWCNet:
