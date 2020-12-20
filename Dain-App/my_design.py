@@ -799,6 +799,7 @@ class My_Ui_Dialog(Ui_Dialog):
 
 			myRenderData.crf = int(self.crfVal.text())
 			myRenderData.pngcompress = int(self.pngCompress.text())
+			print ('PNG compression: %s' % myRenderData.pngcompress)
 
 			myRenderData.pixelUpscaleDowscaleBefore = self.pixelUpscaleDowscaleBefore.currentIndex() + 1
 			myRenderData.pixelDownscaleUpscaleAfter = self.pixelDownscaleUpscaleAfter.currentIndex() + 1
