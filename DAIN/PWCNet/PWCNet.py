@@ -220,7 +220,7 @@ class PWCDCNet(nn.Module):
         # start=  time.time()
         #print ('c16 %s' % c16)
         #print ('c26 %s' % c26)
-        corr6 = self.corr(self.corr, c16, c26)
+        corr6 = self.corr(c16, c26)
         corr6 = self.leakyRELU(corr6)
 
 

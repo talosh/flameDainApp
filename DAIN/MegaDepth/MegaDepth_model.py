@@ -6,7 +6,8 @@ from .options.train_options import TrainOptions
 from .models.models import create_model
 __all__ = ['HourGlass']
 
-
+import warnings
+warnings.filterwarnings("ignore")
 
 def HourGlass(pretrained=None):
     """Constructs a ResNet-18 model.
