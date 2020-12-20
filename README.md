@@ -184,8 +184,7 @@ leave gcc7 build environment
 
 #### Run Dain-App
     
-    $ cd ../../../
-    $ ./start_dain_app
+    $ ~/flameDainApp/start_dain_app
     
 you can run the script directly from within Dain-App folder:
 
